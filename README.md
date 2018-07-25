@@ -1,5 +1,5 @@
 # Scrip instalar [Odoo](https://www.odoo.com "Odoo's Homepage") 11 para ubuntu 16.04 & 18.04
-## con las dependencias y modulos nesesarios para facturacion electronica CHILE. 
+### con las dependencias y modulos nesesarios para facturacion electronica CHILE. 
 los modulos que se instalan son los siguientes: 
 * l10n_cl_chart_of_account de  [Konos](https://github.com/KonosCL)
 * l10n_cl_dte_point_of_sale [Daniel Santibáñez Polanco](https://gitlab.com/dansanti)
