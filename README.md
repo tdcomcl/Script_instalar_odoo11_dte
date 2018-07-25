@@ -17,4 +17,4 @@ Instalacion
 3. hacer ejecutable el script
         ##### sudo chmod +x odoo_install.sh
 4. Executar el script:
-         ##### sudo ./odoo_install.sh
+        ##### sudo ./odoo_install.sh
