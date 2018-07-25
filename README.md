@@ -13,7 +13,7 @@ los modulos que se instalan son los siguientes:
 Es super basico el scrip basicamente ejectuta otro script de [Yenthe666](https://github.com/Yenthe666/InstallScript) para instalacion odoo, clona los repositorios de los modulos mencionado e instala las dependecias para correecto funcionamiento de odoo y los modulos de facturacion electronica CHILENA
 
 ## Instalacion:
-```
+
 #### 1. bajar el script:
 ```
 sudo wget https://raw.githubusercontent.com/tdcomcl/Instalar_Odoo11_dte/master/installscrip.sh
