@@ -13,8 +13,8 @@ es super basico el scrip basicamente ejectuta otra scrip de Yenthe666 para insta
 
 Instalacion 
 1. bajar el script:
-        ##### sudo wget https://raw.githubusercontent.com/tdcomcl/Instalar_Odoo11_dte/master/installscrip.sh
+##### sudo wget https://raw.githubusercontent.com/tdcomcl/Instalar_Odoo11_dte/master/installscrip.sh
 3. hacer ejecutable el script
-        ##### sudo chmod +x odoo_install.sh
+##### sudo chmod +x odoo_install.sh
 4. Executar el script:
-        ##### sudo ./odoo_install.sh
+##### sudo ./odoo_install.sh
