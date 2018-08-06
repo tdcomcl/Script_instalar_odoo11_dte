@@ -4,9 +4,9 @@ sudo apt update && sudo apt upgrade -y
 clear
 echo -e "INSTALANDO DEPENDECIAS NESESARIAS ODOO Y FACTURACCION ELECTRONICA"
 sleep 3s
-sudo apt-get install wget build-essential libssl-dev libffi-dev python3-dev python-suds swig python-dev python-cffi libxml2-dev libxslt1-dev libssl-dev python-lxml python-cryptography python-openssl python-certifi python-defusedxml python3-pip wget -y
+sudo apt-get install  libssl-dev libxml2-dev libxmlsec1-dev build-essential libssl-dev libffi-dev python3-dev python-suds swig python-dev python-cffi libxml2-dev libxslt1-dev libssl-dev python-lxml python-cryptography python-openssl python-certifi python-defusedxml python3-pip wget -y
 sudo apt-get install python3-pip -y
-sudo pip3 install  dicttoxml lxml  pytz cchardet urllib3 xmltodict xlsxwriter requests pysftp pdf417gen xlrd num2words suds-py3 cffi certifi defusedxml cryptography signxml pyOpenSSL phonenumbers
+sudo pip3 install   xmlsec wsse dicttoxml lxml  pytz cchardet urllib3 xmltodict xlsxwriter requests pysftp pdf417gen xlrd num2words suds-py3 cffi certifi defusedxml cryptography signxml pyOpenSSL phonenumbers
 clear
 echo -e "descargando e installdo scrip odoo 11"
 wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
