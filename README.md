@@ -24,7 +24,7 @@ sudo chmod +x installscrip.sh
 ```
 #### 4. Executar el script:
 ```
-sudo ./odoo_install.sh
+sudo ./installscrip.sh
 ```
 
 ## Recuerden canmbiar Password en /etc/odoo-server.conf
