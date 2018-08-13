@@ -6,11 +6,9 @@ echo -e "INSTALANDO DEPENDECIAS NESESARIAS ODOO Y FACTURACCION ELECTRONICA"
 sleep 3s
 sudo apt-get install libssl-dev libxml2-dev libxmlsec1-dev build-essential libssl-dev libffi-dev python3-dev python-suds swig python-dev python-cffi libxml2-dev libxslt1-dev libssl-dev python-lxml python-cryptography python-openssl python-certifi python-defusedxml python3-pip wget -y
 sudo apt-get install python3-pip -y
-sudo pip3 install lxml pytz cchardet urllib3 xmltodict xlsxwriter requests pysftp pdf417gen xlrd num2words suds-py3 
-sudo pip3 install cffi certifi defusedxml cryptography signxml pyOpenSSL phonenumbers xmlsec wsse dicttoxml
-sleep 6s
+sleep 3s
 clear
-echo -e "descargando e installdo scrip odoo 11"
+echo -e "descargando e installdo script odoo 11"
 wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
 sudo chmod +x odoo_install.sh
 sudo ./odoo_install.sh
@@ -70,7 +68,13 @@ sudo chown $OE_USER:$OE_USER /etc/${OE_CONFIG}.conf
 sudo chmod 640 /etc/${OE_CONFIG}.conf
 echo -e "REINICIANDO SERVICIO ODOO"
 sleep 3s
-sudo /etc/init.d/odoo-server restart
+sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/master/requirements.txt
+sudo chmod +x requirements.txt
+pip3 install -r requirements.txt
+
+sudo /etc/init.d/odoo-server stop
+sleep 3
+sudo /etc/init.d/odoo-server start
 clear
 ls -l
 echo
