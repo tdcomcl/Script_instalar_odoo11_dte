@@ -19,3 +19,4 @@ phonenumbers
 xmlsec
 dicttoxml
 xmltodict
+serial
