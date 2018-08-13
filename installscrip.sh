@@ -19,19 +19,18 @@ echo "INICIO GIT CLONE repos DTE"
 cd /odoo/custom/addons
 echo -e "Clonando mudulos en /odoo/custom/addons"
 sleep 3s
-sudo git clone https://gitlab.com/dansanti/l10n_cl_dte_point_of_sale.git
-sudo git clone https://gitlab.com/dansanti/l10n_cl_fe.git
-sudo git clone https://gitlab.com/dansanti/payment_khipu.git
-sudo git clone https://gitlab.com/dansanti/payment_webpay.git
+sudo git clone --branch 11.0 https://gitlab.com/dansanti/l10n_cl_dte_point_of_sale.git
+sudo git clone --branch 11.0 https://gitlab.com/dansanti/l10n_cl_fe.git
+sudo git clone --branch 11.0 https://gitlab.com/dansanti/payment_khipu.git
+sudo git clone --branch 11.0 https://gitlab.com/dansanti/payment_webpay.git
 #sudo git clone https://gitlab.com/dansanti/l10n_cl_stock_picking.git
-sudo git clone https://github.com/OCA/reporting-engine.git 
-sudo git clone https://github.com/KonosCL/addons-konos.git
+sudo git clone --branch 11.0 https://github.com/OCA/reporting-engine.git 
+sudo git clone --branch 11.0 https://github.com/KonosCL/addons-konos.git
 sudo mv addons-konos/l10n_cl_chart_of_account/ /odoo/custom/addons/
 sudo rm -rf addons-konos/
 echo "AGREGANDO PERMISOS CARPETA ADDONS"
 sleep 3s
-chown -R odoo: /odoo/custom/addons/* 
-chmod +x /odoo/custom/addons/*
+
 
 ##fixed parameters
 #odoo
@@ -69,14 +68,15 @@ sudo chmod 640 /etc/${OE_CONFIG}.conf
 echo -e "REINICIANDO SERVICIO ODOO"
 sleep 3s
 sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/master/requirements.txt
-sudo chmod +x requirements.txt
 pip3 install -r requirements.txt
-
+chown -R odoo: /odoo/custom/addons/* 
+chmod +x /odoo/custom/addons/*
 sudo /etc/init.d/odoo-server stop
-sleep 3
+sleep 3s
 sudo /etc/init.d/odoo-server start
 clear
 ls -l
+sleep 2s
 echo
 echo
 echo -e "* Starting Odoo Service"
