@@ -16,7 +16,7 @@ Es super basico el scrip basicamente ejectuta otro script de [Yenthe666](https:/
 
 #### 1. bajar el script:
 ```
-sudo wget https://raw.githubusercontent.com/tdcomcl/Instalar_Odoo11_dte/master/installscrip.sh
+sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/master/installscrip.sh
 ```
 #### 3. hacer ejecutable el script
 ```
