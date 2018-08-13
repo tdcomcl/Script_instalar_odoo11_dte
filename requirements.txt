@@ -2,7 +2,6 @@ lxml
 pytz
 cchardet
 urllib3
-xmltodict
 xlsxwriter
 requests
 pysftp
@@ -19,3 +18,4 @@ pyOpenSSL
 phonenumbers
 xmlsec
 dicttoxml
+xmltodict
