@@ -19,5 +19,3 @@ pyOpenSSL
 phonenumbers
 xmlsec
 dicttoxml
-wsse
-num2words
