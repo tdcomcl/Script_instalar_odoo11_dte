@@ -20,7 +20,7 @@ sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/m
 ```
 #### 3. hacer ejecutable el script
 ```
-sudo chmod +x odoo_install.sh
+sudo chmod +x installscrip.sh
 ```
 #### 4. Executar el script:
 ```
