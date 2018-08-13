@@ -1,5 +1,5 @@
 # !/bin/bash
-echo -e "ACTUALIZANDO UBUNTU" 
+echo  "ACTUALIZANDO UBUNTU" 
 sudo apt update && sudo apt upgrade -y
 clear
 echo -e "INSTALANDO DEPENDECIAS NESESARIAS ODOO Y FACTURACCION ELECTRONICA"
@@ -9,7 +9,7 @@ sudo apt-get install python3-pip -y
 sleep 3s
 clear
 echo -e "descargando e installdo script odoo 11"
-wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
+sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/11.0/odoo_install.sh
 sudo chmod +x odoo_install.sh
 sudo ./odoo_install.sh
 echo "Odoo 11 Instalado"
@@ -30,8 +30,6 @@ sudo mv addons-konos/l10n_cl_chart_of_account/ /odoo/custom/addons/
 sudo rm -rf addons-konos/
 echo "AGREGANDO PERMISOS CARPETA ADDONS"
 sleep 3s
-
-
 ##fixed parameters
 #odoo
 OE_USER="odoo"
@@ -50,7 +48,7 @@ IS_ENTERPRISE="False"
 #set the superadmin password
 OE_SUPERADMIN="admin"
 OE_CONFIG="${OE_USER}-server"
-rm -f /etc/odoo-server.conf
+sudo rm -f /etc/odoo-server.conf
 echo -e "* Create server config file"
 sudo touch /etc/${OE_CONFIG}.conf
 echo -e "* Creating server config file"
@@ -68,9 +66,9 @@ sudo chmod 640 /etc/${OE_CONFIG}.conf
 echo -e "REINICIANDO SERVICIO ODOO"
 sleep 3s
 sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/master/requirements.txt
-pip3 install -r requirements.txt
-chown -R odoo: /odoo/custom/addons/* 
-chmod +x /odoo/custom/addons/*
+sudo pip3 install -r requirements.txt
+sudo chown -R odoo: /odoo/custom/addons/* 
+sudo chmod +x /odoo/custom/addons/*
 sudo /etc/init.d/odoo-server stop
 sleep 3s
 sudo /etc/init.d/odoo-server start
@@ -95,4 +93,7 @@ echo "Stop Odoo service: sudo service $OE_CONFIG stop"
 echo "Restart Odoo service: sudo service $OE_CONFIG restart"
 echo "-----------------------------------------------------------"
 echo
-echo
+echo -e "Iniciando LOGS"
+sleep 2s
+tailf /var/log/odoo/odoo-server.log
+
