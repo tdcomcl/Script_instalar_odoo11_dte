@@ -24,3 +24,5 @@ qrcode
 pyusb
 client
 suds
+Boto
+oauthlib
