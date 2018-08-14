@@ -27,3 +27,4 @@ suds
 Boto
 oauthlib
 requests --upgrade
+simplejson
