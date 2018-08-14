@@ -21,3 +21,4 @@ dicttoxml
 xmltodict
 serial
 qrcode
+pyusb
