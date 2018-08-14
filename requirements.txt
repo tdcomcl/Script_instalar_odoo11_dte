@@ -26,3 +26,4 @@ client
 suds
 Boto
 oauthlib
+requests --upgrade
