@@ -22,3 +22,5 @@ xmltodict
 serial
 qrcode
 pyusb
+client
+suds
