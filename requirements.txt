@@ -21,10 +21,3 @@ dicttoxml
 xmltodict
 serial
 qrcode
-pyusb
-client
-suds
-Boto
-oauthlib
-requests --upgrade
-simplejson
