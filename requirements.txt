@@ -8,13 +8,15 @@ pysftp
 pdf417gen
 xlrd
 num2words
+client
+suds
 suds-py3 
 cffi
 certifi
 defusedxml
+pyOpenSSL
 cryptography
 signxml
-pyOpenSSL
 phonenumbers
 xmlsec
 dicttoxml
