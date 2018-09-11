@@ -37,8 +37,8 @@ sudo git clone --branch 11.0 https://gitlab.com/dansanti/payment_webpay.git
 #sudo git clone https://gitlab.com/dansanti/l10n_cl_stock_picking.git
 sudo git clone --branch 11.0 https://github.com/OCA/reporting-engine.git 
 sudo git clone --branch 11.0 https://github.com/KonosCL/addons-konos.git
-sudo mv addons-konos/l10n_cl_chart_of_account/ /odoo/custom/addons/
-sudo rm -rf addons-konos/
+#sudo mv addons-konos/l10n_cl_chart_of_account/ /odoo/custom/addons/
+#sudo rm -rf addons-konos/
 echo "AGREGANDO PERMISOS CARPETA ADDONS"
 sleep 3s
 ##fixed parameters
@@ -70,7 +70,7 @@ sudo su root -c "printf 'logfile = /var/log/${OE_USER}/${OE_CONFIG}.log\n' >> /e
 if [ $IS_ENTERPRISE = "True" ]; then
     sudo su root -c "printf 'addons_path=${OE_HOME}/enterprise/addons,${OE_HOME_EXT}/addons\n' >> /etc/${OE_CONFIG}.conf"
 else
-    sudo su root -c "printf 'addons_path=${OE_HOME_EXT}/addons,${OE_HOME}/custom/addons,${OE_HOME}/custom/addons/reporting-engine\n' >> /etc/${OE_CONFIG}.conf"
+    sudo su root -c "printf 'addons_path=${OE_HOME_EXT}/addons,${OE_HOME}/custom/addons,${OE_HOME}/custom/addons/reporting-engine,/custom/addons/addons-konos/n' >> /etc/${OE_CONFIG}.conf"
 fi
 sudo chown $OE_USER:$OE_USER /etc/${OE_CONFIG}.conf
 sudo chmod 640 /etc/${OE_CONFIG}.conf
