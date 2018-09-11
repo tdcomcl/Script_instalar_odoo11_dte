@@ -4,10 +4,10 @@ sudo apt update && sudo apt upgrade -y
 clear
 echo -e "INSTALANDO DEPENDECIAS NESESARIAS ODOO Y FACTURACCION ELECTRONICA"
 sleep 3s
-sudo apt-get install python3 python3-pip
+sudo apt-get install python3 python3-pip -y
 sudo apt-get install wget git bzr python-pip gdebi-core -y
 sudo apt-get install python-pypdf2 python-dateutil python-feedparser python-ldap python-libxslt1 python-lxml python-mako python-openid python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi python-docutils python-psutil python-mock python-unittest2 python-jinja2 python-pypdf python-decorator python-requests python-passlib python-pil -y
-sudo pip3 install pypdf2 Babel passlib Werkzeug decorator python-dateutil pyyaml psycopg2 psutil html2text docutils lxml pillow reportlab ninja2 requests gdata XlsxWriter vobject python-openid pyparsing pydot mock mako Jinja2 ebaysdk feedparser xlwt psycogreen suds-jurko pytz pyusb greenlet xlrd 
+sudo pip3 install pypdf2 Babel passlib Werkzeug decorator python-dateutil pyyaml psycopg2 psutil html2text docutils lxml pillow reportlab ninja2 requests gdata XlsxWriter vobject python-openid pyparsing pydot mock mako Jinja2 ebaysdk feedparser xlwt psycogreen suds-jurko pytz pyusb greenlet xlrd -y
 echo -e "\n---- Install python libraries ----"
 # This is for compatibility with Ubuntu 16.04. Will work on 14.04, 15.04 and 16.04
 sudo apt-get install python3-suds
@@ -76,6 +76,9 @@ sudo chown $OE_USER:$OE_USER /etc/${OE_CONFIG}.conf
 sudo chmod 640 /etc/${OE_CONFIG}.conf
 echo -e "REINICIANDO SERVICIO ODOO"
 sleep 3s
+cd /odoo/custom/addons
+sudo pip3 install client
+sudo pip3 install pyOpenSSL
 sudo wget https://raw.githubusercontent.com/tdcomcl/Script_instalar_odoo11_dte/master/requirements.txt
 sudo pip3 install -r requirements.txt
 sudo chown -R odoo: /odoo/custom/addons/* 
